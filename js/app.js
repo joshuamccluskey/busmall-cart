@@ -12,10 +12,12 @@ Cart.prototype.addItem = function(product, quantity) {
 
 Cart.prototype.saveToLocalStorage = function() {
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
+  let stringifiedItem = JSON.stringify([//ARRAY HERE]) //eslint-ignore-line
+  localStorage.setItem ('cart', stringifiedItem); //eslint-ignore-line
 };
 
 Cart.prototype.removeItem = function(item) {
-  // TODO: Fill in this instance method to remove one item from the cart.
+  // TODO: Fill in this instance method to remove one itemm from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
 };
 
@@ -24,7 +26,7 @@ const CartItem = function(product, quantity) {
   this.quantity = quantity;
 };
 
-// Product contructor.
+// Product constructor.
 const Product = function(filePath, name) {
   this.filePath = filePath;
   this.name = name;
